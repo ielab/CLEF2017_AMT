@@ -1,0 +1,10 @@
+{
+  "pool_file_location" : "../../webapps/clef2017relevation/relevation/documents/",
+  "pool_file_location" : "../tempPool/",
+  "topic_details_file" : "./data/CLEF2016_TopicDetails.json",
+  "salt" : "ielab",
+  "domain": "localhost",
+  "port" : "17654",
+  "static_file_location" :  "/static/",
+  "static_file_directory" : "web/static"
+}

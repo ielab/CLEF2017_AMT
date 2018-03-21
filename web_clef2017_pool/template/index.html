@@ -1,0 +1,44 @@
+{{ define "title" }}CLEF 2017 Pool{{ end }}
+
+{{ define "content" }}
+    {{if .ErrorMessage}}
+        <div class="col-sm-12 bg-info" align="left">
+            <h5>{{.ErrorMessage}}</h5>
+        </div>
+
+    {{else}}
+        {{if .TopicError}}
+            <div class="col-sm-12 bg-info" align="left">
+                <h5>{{.TopicError}}</h5>
+            </div>
+        {{else}}
+            {{if .TopicTitle}}
+            <div class="col-sm-12 bg-info" style="padding: 5px" align="left">
+                <h4>Topic: {{.TopicTitle}}</h4>
+                <h6>{{.TopicCriteria}}</h6>
+            </div>
+            <div class="col-sm-12 bg-primary text-white" style="padding: 5px" align="center">
+                <h4>Consider the above topic to assess the following page content:</h4>
+            </div>
+            {{else}}
+            <div class="col-sm-12 bg-primary text-white" style="padding: 5px" align="left">
+                <h5>Welcome to CLEF 2017 Pool</h5>
+            </div>
+            {{end}}
+        {{end}}
+
+
+        <div class="col-sm-12" style="padding-right: 10px;">
+            {{.HtmlString}}
+        </div>
+
+        <div class="col-sm-12" style="padding-right: 10px;" align="center">
+            <h3>Completion Code: <span class="badge badge-primary">{{.CompletionCode}}</span></h3>
+        </div>
+    {{end}}
+{{ end }}
+
+
+{{ define "js" }}
+
+{{ end }}

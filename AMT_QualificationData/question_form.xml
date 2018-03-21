@@ -1,0 +1,49 @@
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Overview>
+    <Title>Assessing relevance of a web page to a health topic</Title>
+
+    <FormattedContent><![CDATA[
+    <p><b>Consider the following topic:</b> <br/>
+    Doctor said I can take Tylenol Cold for some symptoms and Benilyn for others, does he mean in combo?</p>
+
+    <p><b>Relevance criteria:</b> <br/>
+    Results should discuss the use of Benilyn and Tylenol concurrently to treat cold and flu symptoms.
+    Information about drug interactions between the two, and the symptoms each one treats is also appropriate.
+    </p>
+
+    <p><b>Open the link in each question, read the web page content, and assess the content relevance to the above topic!</b></p>
+    ]]></FormattedContent>
+
+  </Overview>
+  <Question>
+    <QuestionIdentifier>Q1</QuestionIdentifier>
+    <DisplayName>Page 1</DisplayName>
+    <IsRequired>true</IsRequired>
+    <QuestionContent>
+      <FormattedContent><![CDATA[
+        <a target="_blank" href="http://clef2017pool.ielab.webfactional.com?doc=clueweb12-0000tw-45-05700;topicId=3no3bj;">
+                http://clef2017pool.ielab.webfactional.com?doc=clueweb12-0000tw-45-05700;topicId=3no3bj;
+        </a>
+      ]]></FormattedContent>
+    </QuestionContent>
+    <AnswerSpecification>
+      <SelectionAnswer>
+        <StyleSuggestion>radiobutton</StyleSuggestion>
+        <Selections>
+          <Selection>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <Text>Highly relevant</Text>
+          </Selection>
+          <Selection>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <Text>Somewhat relevant</Text>
+          </Selection>
+          <Selection>
+            <SelectionIdentifier>0</SelectionIdentifier>
+            <Text>Not relevant</Text>
+          </Selection>
+        </Selections>
+      </SelectionAnswer>
+    </AnswerSpecification>
+  </Question>
+</QuestionForm>

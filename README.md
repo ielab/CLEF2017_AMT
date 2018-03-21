@@ -14,7 +14,9 @@ Then press the "Create Project" button.
 
 <img src="./images/create_new_project.png" alt="Drawing" style="width: 50px;"/>
 
+4. In tab "1. Enter Properties", supply all information requested.
 
+5.
 
 
 

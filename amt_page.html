@@ -1,0 +1,266 @@
+<!-- HIT template: SentimentTweet-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<section class="container" id="Sentiment">
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Web page relevance assessments</strong> <span class="collapse-text">(Click to expand)</span> </a>
+
+<div class="panel-body" id="instructionBody">
+
+	<strong>Relevance criterion:</strong>
+	<table class="table table-condensed table-striped table-responsive">
+		<tbody>
+		</tbody>
+		<colgroup>
+			<col class="col-xs-2 col-md-2" />
+			<col class="col-xs-10 col-md-10" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>Grades</th>
+				<th>Guidance</th>
+			</tr>
+			<tr>
+				<td>Highly Relevant</td>
+				<td>The content of this page provides substantial information on the topic.</td>
+			</tr>
+			<tr>
+				<td>Somewhat Relevant</td>
+				<td>The content of this page provides some information on the topic, which may be minimal; the relevant information must be on this page, not just promising-looking anchor text pointing to a possibly useful page.</td>
+			</tr>
+			<tr>
+				<td>Not Relevant</td>
+				<td>The content of this page does not provide useful information on the topic, but may provide useful information on other topics, including other interpretations of the same topics.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br/>
+	<strong>Readability / Understandability criterion:</strong>
+	<table class="table table-condensed table-striped table-responsive">
+		<tbody>
+		</tbody>
+		<colgroup>
+			<col class="col-xs-2 col-md-2" />
+			<col class="col-xs-10 col-md-10" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>Grades</th>
+				<th>Guidance</th>
+			</tr>
+			<tr>
+				<td>100</td>
+				<td>The content of this page is very EASY to understand.</td>
+			</tr>
+
+			<tr>
+				<td>0</td>
+				<td>The content of this page is very HARD to understand</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br/>
+	<strong>Reliability / Trustworthiness criterion:</strong>
+	<table class="table table-condensed table-striped table-responsive">
+		<tbody>
+		</tbody>
+		<colgroup>
+			<col class="col-xs-2 col-md-2" />
+			<col class="col-xs-10 col-md-10" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>Grades</th>
+				<th>Guidance</th>
+			</tr>
+			<tr>
+				<td>100</td>
+				<td>The content of this page is VERY reliable / trushworthy to understand.</td>
+			</tr>
+
+			<tr>
+				<td>0</td>
+				<td>The content of this page is STRONGLY NOT reliable / trushworthy to understand</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+</div>
+</div>
+<!-- End instructions --><!-- Categorization Layout -->
+
+<div class="row" id="workContent">
+<div class="col-xs-12 col-sm-6 content">
+<table border="0" width="100%">
+    <tr>
+        <td width = "30px" valign="top"><strong>1.</strong></td>
+        <td valign="top">
+            <label class="group-label"> Consider the following topic:</label> <br/>
+            ${title}
+
+			<br/> <br/>
+			<label class="group-label"> Relevance criteria:</label> <br/>
+            ${criteria}
+        </td>
+    <tr/>
+
+    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr>
+        <td valign="top"><strong>2.</strong></td>
+        <td valign="top">
+            <label class="group-label"> Open the following links and read the web page content:</label>
+            <a target="_blank" href="http://clef2017pool.ielab.webfactional.com?doc=${doc_id}&topicId=${topic_id}">
+                http://clef2017pool.ielab.webfactional.com?doc=${doc_id}&topicId=${topic_id}
+            </a>
+        </td>
+    </tr>
+</table>
+</div>
+
+<div class="col-xs-12 col-sm-6 fields">
+<div class="form-group"><!-- Question for the Worker -->
+    <input type="hidden" name="query_prefix" id="query_prefix" value="${query_prefix}">
+	<input type="hidden" name="topic_id" id="topic_id" value="${topic_id}">
+
+    <table border="0" width="100%">
+        <tr>
+            <td width = "30px" valign="top"><strong>3.</strong></td>
+            <td valign="top">
+                <label class="group-label">Based on the topic and the web page content, judge:</label>
+                <label class="group-label">The content relevance to the topic:</label> <!-- Input from the Worker -->
+                <div class="btn-group-vertical" data-toggle="buttons" id="Inputs">
+                    <label class="btn btn-default">
+                        <input id="relevantHigh" name="relevance" required="" type="radio" value="2" />Highly relevant
+                    </label>
+
+                    <label class="btn btn-default">
+                        <input id="relevant" name="relevance" required="" type="radio" value="1" />Somewhat relevant
+                    </label>
+
+                    <label class="btn btn-default">
+                        <input id="notRelevant" name="relevance" required="" type="radio" value="0" />Not Relevant
+                    </label>
+                </div>
+
+
+                <br/>
+                <label class="group-label">The content readability / understandability:</label> <!-- Input from the Worker -->
+                <div>
+                    <input id="readability" name="readability" type="text" data-slider-ticks="[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]" data-slider-value="50" data-slider-ticks-snap-bounds="10" data-slider-ticks-labels='["0", "", "20", "", "40", "", "60", "", "80", "", "100"]'/>
+                </div>
+
+
+                <br/>
+                <label class="group-label">The content reliability / trustworthiness:</label> <!-- Input from the Worker -->
+                <div>
+                    <input id="reliability" name="reliability" type="text" data-slider-ticks="[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]" data-slider-value="50" data-slider-ticks-snap-bounds="10" data-slider-ticks-labels='["0", "", "20", "", "40", "", "60", "", "80", "", "100"]'/>
+                </div>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr>
+            <td valign="top"><strong>4.</strong></td>
+            <td valign="top">
+                <label class="group-label">Paste the completion code (located at the bottom of the web page):</label> <br/>
+                <input id="validationCode" name="validationCode" type="text" size="50"/>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+</div>
+</section>
+<!-- End Categorization Layout -->
+<!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" rel="stylesheet" />
+<!-- Open internal style sheet -->
+<style type="text/css">#collapseTrigger{
+  color:#fff;
+  display: block;
+  text-decoration: none;
+}
+#submitButton{
+  white-space: normal;
+}
+#instructionBody table{
+  font-size: 14px;
+  margin-top: 10px;
+}
+#instructionBody table caption{
+  text-align: left;
+  padding: 0 0 5px 0;
+}
+#Inputs{
+  display: block;
+}
+.content{
+  margin-bottom: 15px;
+}
+.radio:first-of-type{
+  margin-top: -5px;
+}
+
+.slider.slider-horizontal{
+  width:100%;
+}
+
+</style>
+<!-- Close internal style sheet --><!-- External JS references -->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js" crossorigin="anonymous"></script>
+
+<!-- Open internal javascript --><script>
+  $(document).ready(function() {
+   // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    content.hide();
+    $('.collapse-text').text('(Click to expand)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to collapse)');
+      }else{
+        $('.collapse-text').text('(Click to expand)');
+      }
+    });
+    // end expand/collapse
+
+    // highlight selected category
+    var inputs = $("#Inputs input:radio");
+    inputs.change(function(){
+      inputs.parent().removeClass("btn-success");
+      inputs.parent().addClass("btn-default");
+      if($(this).is(":checked")){
+        $(this).parent().removeClass("btn-default");
+        $(this).parent().addClass("btn-success");
+      }else{
+        $(this).parent().removeClass("btn-success");
+        $(this).parent().addClass("btn-default");
+      }
+    });
+    // end highlight
+
+    // Sliders
+    $("#readability").slider({
+    ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    ticks_labels: ['0', '', '20', '', '40', '', '60', '', '80', '', '100'],
+    ticks_snap_bounds: 10
+    });
+
+    $("#reliability").slider({
+    ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    ticks_labels: ['0', '', '20', '', '40', '', '60', '', '80', '', '100'],
+    ticks_snap_bounds: 10
+    });
+    // End Sliders
+
+  });
+</script><!-- Close internal javascript -->

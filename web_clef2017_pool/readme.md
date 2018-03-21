@@ -1,0 +1,1 @@
+To build executable in linux (ielab server): GOOS=linux GOARCH=386 go build
