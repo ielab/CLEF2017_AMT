@@ -27,8 +27,8 @@ with open(questionFile, 'r') as fr:
 with open(answerKeyFile, 'r') as fr:
     answerKey = fr.read()
 
-
-client = boto3.client(
+session = boto3.Session(profile_name="default")
+client = session.client(
     'mturk',
     endpoint_url=mturk_environment["endpoint"],
     region_name=region_name,
@@ -45,7 +45,6 @@ response = client.create_qualification_type(
     AnswerKey=answerKey,
     TestDurationInSeconds=5*60*5,
     AutoGranted=False
-
 )
 
 print(response)

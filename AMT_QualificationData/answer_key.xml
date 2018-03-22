@@ -10,6 +10,50 @@
       <AnswerScore>20</AnswerScore>
     </AnswerOption>
   </Question>
+
+
+  <Question>
+    <QuestionIdentifier>Q2</QuestionIdentifier>
+    <AnswerOption>
+      <SelectionIdentifier>0</SelectionIdentifier>
+      <AnswerScore>20</AnswerScore>
+    </AnswerOption>
+  </Question>
+
+
+  <Question>
+    <QuestionIdentifier>Q3</QuestionIdentifier>
+    <AnswerOption>
+      <SelectionIdentifier>2</SelectionIdentifier>
+      <AnswerScore>20</AnswerScore>
+    </AnswerOption>
+    <AnswerOption>
+      <SelectionIdentifier>1</SelectionIdentifier>
+      <AnswerScore>20</AnswerScore>
+    </AnswerOption>
+  </Question>
+
+
+  <Question>
+    <QuestionIdentifier>Q4</QuestionIdentifier>
+    <AnswerOption>
+      <SelectionIdentifier>0</SelectionIdentifier>
+      <AnswerScore>20</AnswerScore>
+    </AnswerOption>
+  </Question>
+
+
+  <Question>
+    <QuestionIdentifier>Q5</QuestionIdentifier>
+    <AnswerOption>
+      <SelectionIdentifier>2</SelectionIdentifier>
+      <AnswerScore>20</AnswerScore>
+    </AnswerOption>
+    <AnswerOption>
+      <SelectionIdentifier>1</SelectionIdentifier>
+      <AnswerScore>20</AnswerScore>
+    </AnswerOption>
+  </Question>
   <QualificationValueMapping>
     <PercentageMapping>
       <MaximumSummedScore>100</MaximumSummedScore>
