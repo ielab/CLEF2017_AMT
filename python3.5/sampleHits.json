@@ -1,0 +1,12 @@
+{'ResponseMetadata':
+  {'RequestId': '86d4dbdf-18b3-4fcc-ba1f-829d88075716',
+    'HTTPHeaders':
+      {'date': 'Tue, 27 Mar 2018 18:36:51 GMT',
+        'x-amzn-requestid': '86d4dbdf-18b3-4fcc-ba1f-829d88075716',
+        'content-type': 'application/x-amz-json-1.1',
+        'content-length': '2'
+      },
+    'RetryAttempts': 0,
+    'HTTPStatusCode': 200}
+}
+

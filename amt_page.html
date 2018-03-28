@@ -3,7 +3,7 @@
 <section class="container" id="Sentiment">
 <div class="row">
 <div class="col-xs-12 col-md-12">
-<div class="panel panel-primary"><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Web page relevance assessments</strong> <span class="collapse-text">(Click to expand)</span> </a>
+<div class="panel panel-primary"><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Web page relevance assessments</strong> <span class="collapse-text">(For more information click here to expand)</span> </a>
 
 <div class="panel-body" id="instructionBody">
 
@@ -124,6 +124,7 @@
 <div class="form-group"><!-- Question for the Worker -->
     <input type="hidden" name="query_prefix" id="query_prefix" value="${query_prefix}">
 	<input type="hidden" name="topic_id" id="topic_id" value="${topic_id}">
+	<input type="hidden" name="doc_id" id="doc_id" value="${doc_id}">
 
     <table border="0" width="100%">
         <tr>
@@ -206,7 +207,7 @@
 }
 
 .slider.slider-horizontal{
-  width:100%;
+  width:90%;
 }
 
 </style>
@@ -221,14 +222,14 @@
     var content = $('#instructionBody');
     var trigger = $('#collapseTrigger');
     content.hide();
-    $('.collapse-text').text('(Click to expand)');
+    $('.collapse-text').text('(For more information click to expand)');
     trigger.click(function(){
       content.toggle();
       var isVisible = content.is(':visible');
       if(isVisible){
         $('.collapse-text').text('(Click to collapse)');
       }else{
-        $('.collapse-text').text('(Click to expand)');
+        $('.collapse-text').text('(For more information click to expand)');
       }
     });
     // end expand/collapse

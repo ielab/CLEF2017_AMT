@@ -1,6 +1,6 @@
 import boto3
 
-mode = "sandbox"
+mode = "live"
 
 environments = {
         "live": {
@@ -27,7 +27,9 @@ with open(questionFile, 'r') as fr:
 with open(answerKeyFile, 'r') as fr:
     answerKey = fr.read()
 
-session = boto3.Session(profile_name="default")
+#session = boto3.Session(profile_name="default") # jimmy's AMT Sandbox
+session = boto3.Session(profile_name="guido-account") # Guido's AMT
+
 client = session.client(
     'mturk',
     endpoint_url=mturk_environment["endpoint"],

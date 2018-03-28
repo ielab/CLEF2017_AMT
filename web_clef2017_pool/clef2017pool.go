@@ -63,7 +63,9 @@ func handlerIndex(conf *Config, w http.ResponseWriter, r *http.Request) (int, er
 		outData.ErrorMessage = "Oops... page not found!" + conf.PoolFileLocation + outData.DocId
 	}
 
-	outData.HtmlString = template.HTML(byteContent)
+	//log.Println(removeScripts(string(byteContent)))
+
+	outData.HtmlString = template.HTML(removeScripts(string(byteContent)))
 
 	// generate Completion Code
 	hasher := sha1.New()

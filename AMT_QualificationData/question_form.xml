@@ -32,15 +32,15 @@
         <Selections>
           <Selection>
             <SelectionIdentifier>2</SelectionIdentifier>
-            <Text>Highly relevant</Text>
+            <Text>Highly relevant: The content of this page provides substantial information on the topic.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>1</SelectionIdentifier>
-            <Text>Somewhat relevant</Text>
+            <Text>Somewhat relevant: The content of this page provides some information on the topic, which may be minimal; the relevant information must be on this page, not just promising-looking anchor text pointing to a possibly useful page.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>0</SelectionIdentifier>
-            <Text>Not relevant</Text>
+            <Text>Not relevant: The content of this page does not provide useful information on the topic, but may provide useful information on other topics, including other interpretations of the same topics.</Text>
           </Selection>
         </Selections>
       </SelectionAnswer>
@@ -65,15 +65,15 @@
         <Selections>
           <Selection>
             <SelectionIdentifier>2</SelectionIdentifier>
-            <Text>Highly relevant</Text>
+            <Text>Highly relevant: The content of this page provides substantial information on the topic.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>1</SelectionIdentifier>
-            <Text>Somewhat relevant</Text>
+            <Text>Somewhat relevant: The content of this page provides some information on the topic, which may be minimal; the relevant information must be on this page, not just promising-looking anchor text pointing to a possibly useful page.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>0</SelectionIdentifier>
-            <Text>Not relevant</Text>
+            <Text>Not relevant: The content of this page does not provide useful information on the topic, but may provide useful information on other topics, including other interpretations of the same topics.</Text>
           </Selection>
         </Selections>
       </SelectionAnswer>
@@ -99,15 +99,15 @@
         <Selections>
           <Selection>
             <SelectionIdentifier>2</SelectionIdentifier>
-            <Text>Highly relevant</Text>
+            <Text>Highly relevant: The content of this page provides substantial information on the topic.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>1</SelectionIdentifier>
-            <Text>Somewhat relevant</Text>
+            <Text>Somewhat relevant: The content of this page provides some information on the topic, which may be minimal; the relevant information must be on this page, not just promising-looking anchor text pointing to a possibly useful page.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>0</SelectionIdentifier>
-            <Text>Not relevant</Text>
+            <Text>Not relevant: The content of this page does not provide useful information on the topic, but may provide useful information on other topics, including other interpretations of the same topics.</Text>
           </Selection>
         </Selections>
       </SelectionAnswer>
@@ -133,15 +133,15 @@
         <Selections>
           <Selection>
             <SelectionIdentifier>2</SelectionIdentifier>
-            <Text>Highly relevant</Text>
+            <Text>Highly relevant: The content of this page provides substantial information on the topic.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>1</SelectionIdentifier>
-            <Text>Somewhat relevant</Text>
+            <Text>Somewhat relevant: The content of this page provides some information on the topic, which may be minimal; the relevant information must be on this page, not just promising-looking anchor text pointing to a possibly useful page.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>0</SelectionIdentifier>
-            <Text>Not relevant</Text>
+            <Text>Not relevant: The content of this page does not provide useful information on the topic, but may provide useful information on other topics, including other interpretations of the same topics.</Text>
           </Selection>
         </Selections>
       </SelectionAnswer>
@@ -165,15 +165,15 @@
         <Selections>
           <Selection>
             <SelectionIdentifier>2</SelectionIdentifier>
-            <Text>Highly relevant</Text>
+            <Text>Highly relevant: The content of this page provides substantial information on the topic.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>1</SelectionIdentifier>
-            <Text>Somewhat relevant</Text>
+            <Text>Somewhat relevant: The content of this page provides some information on the topic, which may be minimal; the relevant information must be on this page, not just promising-looking anchor text pointing to a possibly useful page.</Text>
           </Selection>
           <Selection>
             <SelectionIdentifier>0</SelectionIdentifier>
-            <Text>Not relevant</Text>
+            <Text>Not relevant: The content of this page does not provide useful information on the topic, but may provide useful information on other topics, including other interpretations of the same topics.</Text>
           </Selection>
         </Selections>
       </SelectionAnswer>
