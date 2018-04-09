@@ -13,6 +13,7 @@ folderInput = "../Results/"
 queryFile = '/volumes/Data/Phd/Data/Clef2017_eval/queries2016.xml'
 
 outQrel = "../clef2017_qrel.txt"
+outQread = "../clef2017_qread.txt"
 
 qrelData = defaultdict(list)
 print("Loading results")
@@ -30,14 +31,16 @@ for folderName in glob.glob(folderInput + "*"):
                     queryPrefix = row[header.index("Input.query_prefix")]
                     docId = row[header.index("Input.doc_id")]
                     relScore = row[header.index("Answer.relevance")]
+                    readScore = row[header.index("Answer.readability")]
 
-                    qrelData[queryPrefix].append({"docId": docId, "relScore": relScore})
+                    qrelData[queryPrefix].append({"docId": docId, "relScore": relScore, "readScore": readScore})
 
 
 tree = etree.parse(queryFile)
 topics = tree.getroot()
 
-fw = open(outQrel, "w")
+fwRel = open(outQrel, "w")
+fwRead = open(outQread, "w")
 print("generating qrels")
 for topic in topics.iter("query"):
     for detail in topic:
@@ -46,8 +49,9 @@ for topic in topics.iter("query"):
 
     print("{}:{} ".format(queryNumber, len(qrelData[queryNumber[:3]])))
     for qData in qrelData[queryNumber[:3]]:
-        fw.write("{} 0 {} {}\n".format(queryNumber, qData["docId"], qData["relScore"]))
+        fwRel.write("{} 0 {} {}\n".format(queryNumber, qData["docId"], qData["relScore"]))
+        fwRead.write("{} 0 {} {}\n".format(queryNumber, qData["docId"], qData["readScore"]))
 
-fw.close()
-
+fwRel.close()
+fwRead.close()
 print("finish all")
