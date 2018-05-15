@@ -12,7 +12,7 @@ Use sandbox to test our settings before launching it for real (i.e., cost money)
 For ECIR 2017, we use the "Sentiment of a tweet" as the starting template.
 Then press the "Create Project" button.
 
-<img src="./images/create_new_project.png" alt="Drawing" style="width: 50px;"/>
+![](./images/create_new_project.png)
 
 4. In tab "1. Enter Properties", supply all information requested.
 
